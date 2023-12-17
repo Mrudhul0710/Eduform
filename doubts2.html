@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Forum - Doubts Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #doubt-form {
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        #doubt-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .doubt-item {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .doubt-item h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Student Forum - Doubts Section</h1>
+
+<!-- Doubt Submission Form -->
+<div id="doubt-form">
+    <h2>Ask a Doubt</h2>
+    <form action="#" method="post" id="submitDoubtForm">
+        <label for="studentName">Your Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <label for="doubtContent">Your Doubt:</label>
+        <textarea id="doubtContent" name="doubtContent" rows="4" required></textarea>
+
+        <button type="submit">Submit Doubt</button>
+    </form>
+</div>
+
+<!-- Doubt Display Section -->
+<div id="doubt-list">
+    <h2>Doubts and Answers</h2>
+    <!-- Doubt Item Template -->
+    <div class="doubt-item">
+        <h3>Sample Doubt Title</h3>
+        <p>Posted by: John Doe</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
+        <p>Answer:</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</div>
+
+<script>
+    // JavaScript code for handling doubt submission (you can use a backend for this)
+    document.getElementById("submitDoubtForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Get form values
+        var studentName = document.getElementById("studentName").value;
+        var doubtContent = document.getElementById("doubtContent").value;
+
+        // Create a new doubt item
+        var newDoubtItem = document.createElement("div");
+        newDoubtItem.className = "doubt-item";
+        newDoubtItem.innerHTML = "<h3>" + studentName + "'s Doubt</h3>" +
+            "<p>" + doubtContent + "</p>" +
+            "<p>Answer: This doubt is awaiting a response.</p>";
+
+        // Append the new doubt item to the doubt list
+        document.getElementById("doubt-list").appendChild(newDoubtItem);
+
+        // Clear the form fields
+        document.getElementById("studentName").value = "";
+        document.getElementById("doubtContent").value = "";
+    });
+</script>
+
+</body>
+</html>
