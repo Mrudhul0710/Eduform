@@ -10,6 +10,12 @@ signupform.addEventListener('submit', (e) => {
 
     createUserWithEmailAndPassword(auth, email, password)
     .then((cred) => {
-        const user = cred.user
+        console.log('user created:', cred.user)
+        signupform.resset()
     })
+    .catch((err) =>{
+        console.log('err.message')
+    })
+
+
 })
