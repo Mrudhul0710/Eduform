@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <style>
-        body{
+        body {
             margin: 20px;
-            background-color:  #d3f6fc;
+            background-color: #d3f6fc;
         }
-        header{
+
+        header {
             padding: 0px 50px;
             background-color: #6dd8e7;
             margin: 150px 475px 0px 475px;
@@ -22,7 +24,7 @@
 
         }
 
-        form{
+        form {
             padding: 10px 50px 50px 160px;
             background-color: #6dd8e7;
             margin: 0px 475px 0px 475px;
@@ -32,28 +34,29 @@
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
         }
-        #email{
+
+        #email {
             text-align: center;
         }
-
-      
-
     </style>
 </head>
+
 <body>
-    <header><h2>Eduhelp Forum</h2></header>
-    <form class="signup">
+    <header>
+        <h2>Eduhelp Forum</h2>
+    </header>
+    <form id="signup">
         <h3>Signup:</h3>
         <label for="Email">Email:</label><br>
-        <input type="email" id="Email" name="Email"><br><br>
+        <input type="email" id="email" name="Email"><br><br>
         <label for="password">Password:</label><br>
         <input type="password" name="password" id="password"><br><br>
         <input type="submit" name="Signup" id="Signup">
         <p id="login">already have an account? <a href="/login/login.html">login</a></p>
     </form>
-    
-<script type="text/javascript" src="signpage.js">
-</script>
+
+    <script type="module" src="signpage.js">
+    </script>
 </body>
 
 </html>
