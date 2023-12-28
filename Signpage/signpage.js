@@ -10,11 +10,10 @@ signUpForm.addEventListener('submit', (e) => {
     var email = form.elements['email'].value;
     var password = form.elements['password'].value;
 
-    console.log(email, password)
-
     createUserWithEmailAndPassword(auth, email, password)
         .then((cred) => {
             console.log('user created:', cred.user);
+            alert('user created:', cred.user);
             signUpForm.reset();
         })
         .catch((err) => {
